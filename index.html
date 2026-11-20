@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vanessa Pouppeville, coach commerciale</title>
-<meta name="description" content="Coach en développement commercial. 20 ans de vente terrain, n°1 de mon réseau en 2024 : je remotive et je structure les équipes commerciales.">
+<title>Vanessa Pouppeville, coaching commercial</title>
+<meta name="description" content="Coaching en développement commercial. 20 ans de vente, n°1 de mon réseau de partenaires en 2024 : je remets les équipes commerciales en mouvement.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coaching.vpouppeville.com/">
-<meta property="og:title" content="Vanessa Pouppeville, coach commerciale">
-<meta property="og:description" content="20 ans de vente terrain, n°1 de mon réseau en 2024. Je remets les équipes commerciales en mouvement.">
+<meta property="og:title" content="Vanessa Pouppeville, coaching en développement commercial">
+<meta property="og:description" content="20 ans de vente, et je vends toujours. Je remets les équipes commerciales en mouvement.">
 <meta property="og:image" content="https://coaching.vpouppeville.com/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -84,12 +84,12 @@ p{margin:0;text-wrap:pretty}
 }
 
 /* Stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line)}
 .stat{padding:28px 20px 30px 0;display:flex;flex-direction:column;gap:6px}
 .stat + .stat{padding-left:24px;border-left:1px solid var(--line)}
 .stat b{font-family:var(--display);font-size:clamp(34px,4vw,52px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-0.03em}
 .stat span{font-size:15px;color:var(--muted);line-height:1.4}
-@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(3){padding-left:0;border-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:760px){.stats{grid-template-columns:1fr}.stat + .stat{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
 
 /* Sections */
 section{padding:96px 0}
@@ -128,21 +128,10 @@ section{padding:96px 0}
 .tag-ex{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:2px 9px;margin-right:4px;vertical-align:1px}
 .tlinks{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
 .fulltext{margin-top:12px;padding:16px 18px;background:var(--paper);border-radius:12px;color:var(--ink);font-size:15px;line-height:1.6;display:flex;flex-direction:column;gap:10px}
-.bridge{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1.5px solid var(--ink)}
-.bridge li{padding:22px 20px 6px 0;display:flex;flex-direction:column;gap:8px}
-.bridge li + li{padding-left:20px;border-left:1px solid var(--line)}
-.bridge b{font-family:var(--display);font-size:19px;font-weight:700;line-height:1.2}
-.bridge span{color:var(--muted);font-size:15.5px}
-@media (max-width:860px){.bridge{grid-template-columns:1fr 1fr}.bridge li:nth-child(3){padding-left:0;border-left:0}.bridge li:nth-child(n+3){border-top:1px solid var(--line)}}
-@media (max-width:520px){.bridge{grid-template-columns:1fr}.bridge li,.bridge li + li{padding-left:0;border-left:0}.bridge li + li{border-top:1px solid var(--line)}}
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:none}
-.steps li{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:8px}
-.steps .num{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:600;font-family:var(--display)}
-.steps h3{font-size:20px;font-weight:700}
-.steps p{color:var(--muted);font-size:15.5px}
-.steps small{margin-top:auto;font-size:13px;color:var(--accent);font-weight:600}
-@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.traits{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.traits li{display:flex;flex-direction:column;gap:2px;padding-left:14px;border-left:2px solid var(--accent)}
+.traits b{font-size:16px}
+.traits span{color:var(--muted);font-size:14.5px;font-style:italic}
 .tmeta{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--line)}
 .avatar{width:40px;height:40px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:600;font-size:15px;flex:none}
 .tmeta b{display:block;font-size:15.5px}
@@ -192,7 +181,6 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
     <ul>
       <li><a href="#video">Vidéo</a></li>
       <li><a href="#apport">Ce que j'apporte</a></li>
-      <li><a href="#methode">Méthode</a></li>
       <li><a href="#temoignages">Témoignages</a></li>
       <li><a href="#parcours">Parcours</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -204,9 +192,9 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
   <div class="wrap">
     <div class="hero">
       <div>
-        <span class="eyebrow">Coach en développement commercial</span>
+        <span class="eyebrow">Coaching en développement commercial</span>
         <h1>Je remets les équipes commerciales <em>en mouvement.</em></h1>
-        <p class="lead">Vingt ans de vente sur le terrain, et je vends toujours : n°1 en 2024 parmi les partenaires indépendants solo de mon réseau photovoltaïque. Je coache les commerciaux, sur le terrain comme en agence, pour qu'ils sortent de leurs habitudes, reprennent confiance et signent davantage.</p>
+        <p class="lead">Vingt ans de vente sur le terrain, et je vends toujours : n°1 en 2024 parmi les partenaires indépendants de mon réseau. Je coache les commerciaux pour qu'ils sortent de leurs habitudes, reprennent confiance et signent davantage.</p>
         <div class="ctas">
           <a class="btn btn-primary" href="#video">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
@@ -224,7 +212,6 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
       <div class="stat"><b data-count="20" data-suffix="+ ans">20+ ans</b><span>de développement commercial, en B2B et en B2C</span></div>
       <div class="stat"><b>N°1</b><span>en 2024 parmi les partenaires indépendants solo de mon réseau (n°2 en 2023)</span></div>
       <div class="stat"><b data-count="110" data-suffix=" k€+">110 k€+</b><span>de commissions facturées par an en 2023 et en 2024</span></div>
-      <div class="stat"><b>1 M€</b><span>des projets jusqu'à 1 M€, menés de la prospection à la signature</span></div>
     </div>
   </div>
 
@@ -245,22 +232,6 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
         <p class="who">Carlo Tarallo, fondateur d'une agence de marketing digital</p>
         <p class="quote">« Elle m'a guidé tout au long du processus. Je vais pouvoir intégrer mon équipe commerciale plus vite que je ne le pensais. »</p>
       </div>
-    </div>
-  </section>
-
-  <section id="terrain" class="bridge-sec">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Mon terrain et l'immobilier</span>
-        <h2>Je connais la vente aux particuliers et les décisions qui prennent du temps.</h2>
-        <p>Mon activité commerciale actuelle a beaucoup en commun avec le quotidien d'un agent immobilier.</p>
-      </div>
-      <ul class="bridge">
-        <li><b>Des particuliers et des projets liés à l'habitat</b><span>Rénovation de l'habitat, courtage gaz et électricité, auprès de particuliers, d'artisans et de TPE/PME.</span></li>
-        <li><b>Des cycles de vente longs, à fort enjeu</b><span>Des projets jusqu'à 1 M€, de la première prise de contact à la signature.</span></li>
-        <li><b>Des dossiers administratifs à monter</b><span>Montage de dossiers techniques, administratifs et d'urbanisme.</span></li>
-        <li><b>La recommandation comme moteur</b><span>Programmes de parrainage et prospection multicanal pour générer des contacts.</span></li>
-      </ul>
     </div>
   </section>
 
@@ -285,29 +256,14 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
         <article class="card">
           <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.4 0 4 1.5 4.6 4"/></svg></div>
           <h3>Animer et piloter</h3>
-          <p>J'ai recruté, structuré et managé des équipes commerciales, notamment des forces de vente indépendantes, et je sais ce qui fait avancer un groupe.</p>
+          <p>Depuis 2008, je recrute et manage des commerciaux indépendants : parfois sur le long terme, parfois pour mettre en place une nouvelle équipe.</p>
         </article>
         <article class="card">
           <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></div>
-          <h3>Marketing digital et parrainage</h3>
-          <p>J'ai mis en place des campagnes de marketing digital et des programmes de parrainage pour générer des contacts. Formation continue en marketing digital, en France et aux États-Unis.</p>
+          <h3>Marketing et parrainage</h3>
+          <p>Campagnes de marketing digital, programmes de parrainage, et marketing relationnel local : événements, animations. Formation continue en marketing digital (FR/US).</p>
         </article>
       </div>
-    </div>
-  </section>
-
-  <section id="methode" style="padding-top:24px">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Ma méthode</span>
-        <h2>Ma façon de travailler, telle que mes clients la décrivent</h2>
-      </div>
-      <ol class="steps">
-        <li><span class="num">1</span><h3>Faire le point</h3><p>Avoir une vue d'ensemble de la situation avant d'agir.</p><small>Céline</small></li>
-        <li><span class="num">2</span><h3>Lever les freins</h3><p>Dépasser les croyances négatives qui bloquent la vente.</p><small>Hannah, Céline</small></li>
-        <li><span class="num">3</span><h3>Un plan d'action adapté</h3><p>Des outils pensés pour chaque personne, qui rendent la vente plus naturelle.</p><small>Céline, Aurélie</small></li>
-        <li><span class="num">4</span><h3>Un suivi au quotidien</h3><p>Disponible entre les séances, avec encouragements et retours francs.</p><small>Hannah, Marine</small></li>
-      </ol>
     </div>
   </section>
 
@@ -372,14 +328,20 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
       </div>
       <div class="path">
         <ol class="timeline">
-          <li><span class="when">Depuis 2008</span><h3>Coach en développement commercial</h3><p>J'accompagne des TPE/PME et des entrepreneurs : techniques et stratégies de vente, structuration et pilotage d'équipes commerciales.</p></li>
+          <li><span class="when">Depuis 2008</span><h3>Coaching en développement commercial</h3><p>J'accompagne des TPE/PME et des entrepreneurs : techniques et stratégies de vente, structuration et pilotage d'équipes commerciales. Je recrute et manage des commerciaux indépendants, sur le long terme ou pour la mise en place de nouvelles équipes.</p></li>
           <li><span class="when">Depuis 2008</span><h3>Commerciale freelance</h3><p>Photovoltaïque B2B (projets jusqu'à 1 M€, cycle de vente complet), courtage gaz et électricité, rénovation de l'habitat, secteur médical.</p></li>
           <li><span class="when">2002 – 2008</span><h3>Débuts</h3><p>Gérante d'une société de communication événementielle (2006 – 2008), commerciale et visiteuse médicale en santé et parapharmacie (2002 – 2006).</p></li>
         </ol>
         <div class="side">
           <div><h3>Formation</h3><p>Technico-commerciale de santé (2002)<br>Formation continue en marketing digital (FR/US)</p></div>
           <div><h3>Langues</h3><p>Français, anglais courant</p></div>
-          <div><h3>Ce qui me caractérise</h3><div class="tags"><span>Énergie communicative</span><span>Directe et claire</span><span>Redonne confiance</span><span>Créative</span><span>Tenace dans le suivi et les relances</span><span>Méthodique</span><span>Excellence relationnelle</span><span>Intègre et transparente</span></div></div>
+          <div><h3>Ce que mes clients disent de moi</h3><ul class="traits">
+            <li><b>Énergie communicative</b><span>« Vanessa a une énergie essentielle à ce qu'elle fait. » Marine</span></li>
+            <li><b>Directe et claire</b><span>« On ne tourne pas autour du pot. » Aurélie</span></li>
+            <li><b>Redonne confiance</b><span>« Elle m'a très vite donné confiance. » Marine</span></li>
+            <li><b>Créative</b><span>« Pleine d'idées pour mon entreprise. » Marine</span></li>
+            <li><b>Intègre</b><span>« D'une grande intégrité, éthique. » Hannah</span></li>
+          </ul></div>
         </div>
       </div>
     </div>
@@ -401,7 +363,7 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
   </section>
 </main>
 
-<footer class="wrap">Vanessa Pouppeville · Coach en développement commercial</footer>
+<footer class="wrap">Vanessa Pouppeville · Coaching en développement commercial</footer>
 
 <script>
 (function(){
