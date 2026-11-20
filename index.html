@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanessa Pouppeville, coach commerciale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout: one bold dark band (the video) between quiet light sections; cobalt is the only accent. */
+  --paper:#F3F4EF;
+  --surface:#FFFFFF;
+  --ink:#12151C;
+  --muted:#545B68;
+  --line:#DDE0D8;
+  --accent:#2B44E8;
+  --accent-soft:#E3E7FF;
+  --night:#0F1424;
+  --night-ink:#EEF0FA;
+  --night-muted:#A9B0C8;
+  --display:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap:1120px;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-0.02em}
+p{margin:0;text-wrap:pretty}
+.eyebrow{font-family:var(--body);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+
+/* Nav */
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0}
+.brand{font-family:var(--display);font-weight:700;font-size:19px;color:var(--ink);text-decoration:none}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
+.nav ul a{color:var(--muted);text-decoration:none}
+.nav ul a:hover{color:var(--ink)}
+@media (max-width:720px){.nav ul{display:none}}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center;padding:40px 0 72px}
+.hero h1{font-size:clamp(42px,6.4vw,84px);font-weight:800;line-height:.98;margin:18px 0 24px}
+.hero h1 em{font-style:normal;color:var(--accent);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.12em;background:var(--accent);opacity:.18;border-radius:4px;transform-origin:left;animation:underline .9s .35s cubic-bezier(.2,.8,.2,1) both}
+@keyframes underline{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.lead{font-size:19px;color:var(--muted);max-width:34em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#1F35C9}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.portrait{position:relative;justify-self:end;width:100%;max-width:380px}
+.portrait img{width:100%;height:auto;aspect-ratio:959/872;object-fit:cover;border-radius:24px;box-shadow:0 18px 50px rgba(18,21,28,.12)}
+.chip{position:absolute;background:var(--surface);border-radius:18px;padding:14px 18px;box-shadow:0 12px 40px rgba(18,21,28,.14);display:flex;flex-direction:column;gap:2px}
+.chip strong{font-family:var(--display);font-size:28px;line-height:1;font-weight:800}
+.chip span{font-size:13px;color:var(--muted);line-height:1.35}
+.chip-a{left:-28px;bottom:64px;animation:float 6s ease-in-out infinite}
+.chip-b{right:-16px;top:56px;animation:float 6s 1.5s ease-in-out infinite}
+.chip-b strong{color:var(--accent)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:40px;padding-top:16px}
+  .portrait{justify-self:start;max-width:300px}
+  .chip-a{left:-8px}.chip-b{right:-8px}
+}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line)}
+.stat{padding:28px 20px 30px 0;display:flex;flex-direction:column;gap:6px}
+.stat + .stat{padding-left:24px;border-left:1px solid var(--line)}
+.stat b{font-family:var(--display);font-size:clamp(34px,4vw,52px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-0.03em}
+.stat span{font-size:15px;color:var(--muted);line-height:1.4}
+@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(3){padding-left:0;border-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* Sections */
+section{padding:96px 0}
+.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px;max-width:44em}
+.sec-head h2{font-size:clamp(32px,4vw,48px);font-weight:700;line-height:1.05}
+.sec-head p{color:var(--muted);font-size:18px}
+
+/* What I bring */
+.bring{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s ease, transform .2s ease}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card .ico{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.card h3{font-size:23px;font-weight:700}
+.card p{color:var(--muted)}
+@media (max-width:760px){.bring{grid-template-columns:1fr}}
+
+/* Video band */
+.video-band{background:var(--night);color:var(--night-ink)}
+.video-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:center}
+.video-band .eyebrow{color:#9DAAFF}
+.video-band h2{font-size:clamp(30px,3.6vw,44px);font-weight:700;line-height:1.08;margin:14px 0 20px}
+.video-band .who{color:var(--night-muted);font-size:16px}
+.quote{font-family:var(--display);font-size:24px;font-weight:500;line-height:1.3;margin-top:24px;padding-top:24px;border-top:1px solid rgba(238,240,250,.18)}
+.player{border-radius:20px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.player video{width:100%;aspect-ratio:16/9;background:#000}
+.video-note{font-size:14px;color:var(--night-muted);margin-top:12px}
+@media (max-width:860px){.video-grid{grid-template-columns:1fr}}
+
+/* Testimonials */
+.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;align-items:start}
+.tcard{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:16px}
+.tcard blockquote{margin:0;font-family:var(--display);font-size:22px;font-weight:600;line-height:1.28;letter-spacing:-0.01em}
+.tcard blockquote::before{content:"«\00a0";color:var(--accent)}
+.tcard blockquote::after{content:"\00a0»";color:var(--accent)}
+.tcard .full{color:var(--muted);font-size:15.5px}
+.tmeta{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--line)}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:600;font-size:15px;flex:none}
+.tmeta b{display:block;font-size:15.5px}
+.tmeta small{color:var(--muted);font-size:13.5px}
+details{font-size:14.5px}
+summary{cursor:pointer;color:var(--accent);font-weight:600;list-style:none;display:inline-flex;align-items:center;gap:6px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;font-size:14px;line-height:1}
+details[open] summary::before{content:"–"}
+details img{margin-top:14px;border:1px solid var(--line);border-radius:10px}
+@media (max-width:860px){.tgrid{grid-template-columns:1fr}}
+
+/* Background */
+.path{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 30px 28px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.timeline li:first-child::before,.timeline li:nth-child(2)::before{background:var(--accent)}
+.timeline .when{font-size:14px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
+.timeline h3{font-size:21px;font-weight:700;margin:2px 0 4px}
+.timeline p{color:var(--muted);font-size:16px}
+.side{display:flex;flex-direction:column;gap:28px}
+.side h3{font-family:var(--body);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:15px}
+@media (max-width:860px){.path{grid-template-columns:1fr}}
+
+/* Contact */
+.contact{background:var(--accent);color:#fff;border-radius:32px;padding:64px 56px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.contact h2{font-size:clamp(34px,4.4vw,56px);font-weight:800;line-height:1}
+.contact p{color:#DDE2FF;margin-top:16px;font-size:18px}
+.contact ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.contact li{background:rgba(255,255,255,.12);border-radius:16px;padding:16px 20px;display:flex;flex-direction:column}
+.contact li small{font-size:13px;color:#C9D0FF;letter-spacing:.06em;text-transform:uppercase}
+.contact li a,.contact li span{color:#fff;font-weight:600;font-size:18px;text-decoration:none;word-break:break-word}
+@media (max-width:860px){.contact{grid-template-columns:1fr;padding:44px 28px}}
+footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <nav class="nav" aria-label="Navigation principale">
+    <a class="brand" href="#top">Vanessa Pouppeville</a>
+    <ul>
+      <li><a href="#apport">Ce que j'apporte</a></li>
+      <li><a href="#video">Vidéo</a></li>
+      <li><a href="#temoignages">Témoignages</a></li>
+      <li><a href="#parcours">Parcours</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Coach en développement commercial</span>
+        <h1>Je remets les équipes commerciales <em>en mouvement.</em></h1>
+        <p class="lead">Vingt ans de vente sur le terrain, et je vends toujours : n°1 de mon réseau en 2024. Je coache les commerciaux pour qu'ils sortent de leurs habitudes, reprennent confiance et signent davantage.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#video">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+            Voir le témoignage vidéo
+          </a>
+          <a class="btn btn-ghost" href="#contact">Me contacter</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="vanessa.jpg" alt="Portrait de Vanessa Pouppeville" width="900" height="818">
+      </div>
+    </div>
+
+    <div class="stats" aria-label="Chiffres clés">
+      <div class="stat"><b data-count="20" data-suffix="+ ans">20+ ans</b><span>de développement commercial, en B2B et en B2C</span></div>
+      <div class="stat"><b>N°1</b><span>en 2024 parmi les partenaires indépendants solo de mon réseau (n°2 en 2023)</span></div>
+      <div class="stat"><b data-count="110" data-suffix=" k€+">110 k€+</b><span>de commissions facturées par an en 2023 et en 2024</span></div>
+      <div class="stat"><b data-count="2008" data-from="1990">2008</b><span>l'année où j'ai commencé à coacher des commerciaux et des entrepreneurs</span></div>
+    </div>
+  </div>
+
+  <section id="apport">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Ce que j'apporte à une équipe</span>
+        <h2>Du concret, testé sur le terrain chaque semaine.</h2>
+        <p>Je ne coache pas avec des théories : ce que je transmets, je l'applique moi-même en rendez-vous client.</p>
+      </div>
+      <div class="bring">
+        <article class="card">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <h3>Remotiver et débloquer</h3>
+          <p>Je travaille sur les freins et les croyances qui empêchent de vendre, pour redonner confiance et envie d'aller chercher de nouveaux clients.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+          <h3>Structurer la prospection</h3>
+          <p>Prospection multicanal, relances rigoureuses, suivi des cycles de vente longs : des méthodes simples que chacun peut appliquer dès le lendemain.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.4 0 4 1.5 4.6 4"/></svg></div>
+          <h3>Animer et piloter</h3>
+          <p>J'ai recruté, structuré et managé des équipes commerciales, notamment des forces de vente indépendantes, et je sais ce qui fait avancer un groupe.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
+          <h3>Montrer l'exemple</h3>
+          <p>Commerciale indépendante en activité, je mène moi-même des ventes jusqu'à 1 M€ : de la prospection à la signature.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="video" class="video-band">
+    <div class="wrap video-grid">
+      <div>
+        <div class="player">
+          <video controls preload="metadata" poster="carlo-poster.jpg" playsinline>
+            <source src="carlo.mp4" type="video/mp4">
+            <track kind="subtitles" src="data:text/vtt;base64,V0VCVlRUCgowMDowMDowMC4wMDAgLS0+IDAwOjAwOjA0LjIwMApCb25qb3VyIMOgIHRvdXMsIGplIG0nYXBwZWxsZSBDYXJsbyBUYXJhbGxvLApqZSBzdWlzIGxlIGZvbmRhdGV1cgoKMDA6MDA6MDQuMjAwIC0tPiAwMDowMDoxMC4wMDAKZCd1bmUgYWdlbmNlIGRlIG1hcmtldGluZyBkaWdpdGFsIGJhc8OpZSBpY2ksIMOgIFZhbmNvdXZlci4KSmUgc3VpcyBlbiB0cmFpbiBkZQoKMDA6MDA6MTAuMDAwIC0tPiAwMDowMDoxOS4wMDAKZMOpdmVsb3BwZXIgbW9uIMOpcXVpcGUgY29tbWVyY2lhbGUsIGV0IGMnZXN0IHBvdXIgw6dhIHF1ZSBqJ2FpIGNvbnRhY3TDqSBWYW5lc3NhIDoKamUgc2F2YWlzIHF1J2VsbGUgcG91cnJhaXQgbSdhaWRlcgoKMDA6MDA6MTkuMDAwIC0tPiAwMDowMDoyNi4wMDAKZXQgbSdhcHBvcnRlciBkZXMgY29uc2VpbHMgcHLDqWNpZXV4CnN1ciBsYSBtYXJjaGUgw6Agc3VpdnJlLgoKMDA6MDA6MjYuMDAwIC0tPiAwMDowMDozMy4wMDAKRWxsZSBtJ2EgYXBwb3J0w6kgw6lub3Jtw6ltZW50IGQnaWTDqWVzCnF1ZSBqZSBuJ2F1cmFpcyBwYXMgdHJvdXbDqWVzIHNldWwuCgowMDowMDozMy4wMDAgLS0+IDAwOjAwOjQwLjAwMApFbGxlIG0nYSBndWlkw6kgdG91dCBhdSBsb25nIGR1IHByb2Nlc3N1cy4KRWxsZSBhIHRyw6hzIGJpZW4gY29tcHJpcyBtYSBzaXR1YXRpb24KCjAwOjAwOjQwLjAwMCAtLT4gMDA6MDA6NDUuMDAwCmV0IG0nYSBkb25uw6kgZGVzIGNvbnNlaWxzIHZyYWltZW50IHByw6ljaWV1eC4KQWxvcnMgc2kgYydlc3Qgdm90cmUgY2FzLCBzaSB2b3VzCgowMDowMDo0NS4wMDAgLS0+IDAwOjAwOjUxLjAwMApjaGVyY2hleiDDoCBzdHJ1Y3R1cmVyIGwnaW50w6lncmF0aW9uIGRlIHZvdHJlIMOpcXVpcGUgY29tbWVyY2lhbGUsCm91IHNpbXBsZW1lbnQgw6AgbCdpbnTDqWdyZXIsCgowMDowMDo1MS4wMDAgLS0+IDAwOjAwOjU3LjAwMApjJ2VzdCBsJ2V4cGVydGUgcXUnaWwgdm91cyBmYXV0LgpKZSB2b3VzIHJlY29tbWFuZGUgdml2ZW1lbnQgZGUgY29udGFjdGVyIFZhbmVzc2EuCgowMDowMDo1Ny4wMDAgLS0+IDAwOjAxOjA0LjAwMApFbGxlIGVzdCBiYXPDqWUgZW4gRnJhbmNlLCBtYWlzIGVsbGUgcGFybGUgdHLDqHMgYmllbiBhbmdsYWlzLAplbGxlIHBvdXJyYSBkb25jIHZvdXMgYWlkZXIKCjAwOjAxOjA0LjAwMCAtLT4gMDA6MDE6MTIuMDAwCm/DuSBxdWUgdm91cyBzb3llei4KUGFybGV6LWx1aSwgZWxsZSBwZXV0IHZyYWltZW50IHZvdXMgYWlkZXIuCgowMDowMToxMi4wMDAgLS0+IDAwOjAxOjE2LjAwMApFdCBWYW5lc3NhLCBzaSB0dSByZWdhcmRlcyBjZXR0ZSB2aWTDqW8sCmplIHRpZW5zIMOgIHRlIHJlbWVyY2llcgoKMDA6MDE6MTYuMDAwIC0tPiAwMDowMToyNC4wMDAKcG91ciB0b3V0IGNlIHF1ZSB0dSBhcyBmYWl0IHBvdXIgbW9pLgpKZSB2YWlzIG1ldHRyZSB0ZXMgY29uc2VpbHMgZW4gcHJhdGlxdWUgZMOocyBhdWpvdXJkJ2h1aQoKMDA6MDE6MjQuMDAwIC0tPiAwMDowMTozMC4wMDAKZXQgamUgdmFpcyBwb3V2b2lyIGludMOpZ3JlciBtb24gw6lxdWlwZSBjb21tZXJjaWFsZQpwbHVzIHZpdGUgcXVlIGplIG5lIGxlIHBlbnNhaXMuIE1lcmNpIGJlYXVjb3VwCgowMDowMTozMC4wMDAgLS0+IDAwOjAxOjM1LjAwMApwb3VyIMOnYS4gQm9ubmUgam91cm7DqWUsCmV0IG1lcmNpIGVuY29yZSBkJ2F2b2lyIHJlZ2FyZMOpIGNldHRlIHZpZMOpby4KCjAwOjAxOjM1LjAwMCAtLT4gMDA6MDE6NDAuMDAwCkNvbnRhY3RleiBWYW5lc3NhLCBwcm9wb3Nlei1sdWkgdW4gYXBwZWwgOgpzaSB2b3VzIMOqdGVzIGRhbnMgY2V0dGUgc2l0dWF0aW9uLAoKMDA6MDE6NDAuMDAwIC0tPiAwMDowMTo0NS4wMDAKZWxsZSBwZXV0IHZyYWltZW50IHZvdXMgYWlkZXIuIE1lcmNpLgo=" srclang="fr" label="Français" default>
+          </video>
+        </div>
+        <p class="video-note">Vidéo en anglais, sous-titrée en français · 1 min 45</p>
+      </div>
+      <div>
+        <span class="eyebrow">Témoignage vidéo</span>
+        <h2>Structurer une équipe commerciale à distance, de la France à Vancouver</h2>
+        <p class="who">Carlo Tarallo, fondateur d'une agence de marketing digital</p>
+        <p class="quote">« Elle m'a guidé tout au long du processus. Je vais pouvoir intégrer mon équipe commerciale plus vite que je ne le pensais. »</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="temoignages">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Témoignages</span>
+        <h2>Ce que disent les personnes que j'ai accompagnées</h2>
+        <p>Recommandations publiées sur LinkedIn et Facebook, traduites de l'anglais. L'original est disponible sous chaque témoignage.</p>
+      </div>
+      <div class="tgrid">
+        <article class="tcard">
+          <blockquote>En seulement quatre semaines, j'ai accompli énormément.</blockquote>
+          <p class="full">Je me sentais bloquée sur certains aspects des appels de vente, avec des croyances négatives autour de la vente d'offres à forte valeur. Vanessa a fait preuve d'une patience immense et m'a guidée vers ce que je voulais vraiment. En plus des appels Zoom et des fiches de travail, elle m'a apporté encouragements et soutien quotidiens. Je n'avais jamais connu un tel niveau d'accompagnement.</p>
+          <details><summary>Voir l'original</summary><img src="hannah.png" alt="Recommandation LinkedIn originale de Dr Hannah Gibson, en anglais" loading="lazy" width="769" height="383"></details>
+          <div class="tmeta"><span class="avatar" aria-hidden="true">HG</span><div><b>Dr Hannah Gibson</b><small>Rédactrice web et consultante · LinkedIn, 2022</small></div></div>
+        </article>
+        <article class="tcard">
+          <blockquote>Avec Vanessa, on ne tourne pas autour du pot. C'est clair, on avance, et ça marche.</blockquote>
+          <p class="full">Mon chiffre d'affaires stagnait. J'ai compris que vendre est un acte positif et nécessaire au développement de mon entreprise. Pendant notre accompagnement, j'ai même vendu mon premier programme personnalisé sur le champ. Vanessa m'a donné des outils adaptés à qui je suis, qui rendent la vente beaucoup plus simple et naturelle.</p>
+          <details><summary>Voir l'original</summary><img src="aurelie.png" alt="Recommandation Facebook originale d'Aurélie Pinto, en anglais" loading="lazy" width="696" height="329"></details>
+          <div class="tmeta"><span class="avatar" aria-hidden="true">AP</span><div><b>Aurélie Pinto</b><small>Entrepreneure · Facebook</small></div></div>
+        </article>
+        <article class="tcard">
+          <blockquote>Elle dit les choses avec bon sens, sans jugement, et explique comment avancer.</blockquote>
+          <p class="full">J'étais bloquée sur la prospection, le démarrage et l'étude de marché. Vanessa m'a donné ce dont j'avais besoin pour avancer de façon simple et efficace, avec beaucoup d'application concrète. Elle était disponible toute la journée pour répondre à mes questions, et m'a très vite donné confiance en mon projet.</p>
+          <details><summary>Voir l'original</summary><img src="marine.png" alt="Recommandation Facebook originale de Marine Bsn, en anglais" loading="lazy" width="666" height="494"></details>
+          <div class="tmeta"><span class="avatar" aria-hidden="true">MB</span><div><b>Marine Bsn</b><small>Entrepreneure · Facebook, 2021</small></div></div>
+        </article>
+        <article class="tcard">
+          <blockquote>Une excellente coach pour retrouver confiance en soi et développer son activité.</blockquote>
+          <p class="full">Vanessa m'a aidée à avoir une vue d'ensemble de ma situation, à me recentrer, à dépasser mes croyances et à construire un plan d'action. Elle est toujours à mes côtés et me conseille quand j'ai un doute sur une action à mener.</p>
+          <details><summary>Voir l'original</summary><img src="celine.png" alt="Recommandation Facebook originale de Céline Kotch, en anglais" loading="lazy" width="670" height="208"></details>
+          <div class="tmeta"><span class="avatar" aria-hidden="true">CK</span><div><b>Céline Kotch</b><small>Entrepreneure · Facebook, 2021</small></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="parcours" style="padding-top:24px">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Parcours</span>
+        <h2>Vingt ans de terrain, du salariat à l'indépendance</h2>
+      </div>
+      <div class="path">
+        <ol class="timeline">
+          <li><span class="when">Depuis 2008</span><h3>Coach en développement commercial</h3><p>J'accompagne des TPE/PME et des entrepreneurs : techniques et stratégies de vente, structuration et pilotage d'équipes commerciales.</p></li>
+          <li><span class="when">Depuis 2008</span><h3>Commerciale freelance</h3><p>Photovoltaïque B2B (projets jusqu'à 1 M€, cycle de vente complet), courtage gaz et électricité, rénovation de l'habitat, secteur médical.</p></li>
+          <li><span class="when">2006 – 2008</span><h3>Gérante de société</h3><p>Communication événementielle : création de l'entreprise, management d'équipe, développement commercial.</p></li>
+          <li><span class="when">2002 – 2006</span><h3>Commerciale et visiteuse médicale</h3><p>Santé et parapharmacie : pharmaciens, médecins, magasins orthopédiques.</p></li>
+        </ol>
+        <div class="side">
+          <div><h3>Secteurs</h3><div class="tags"><span>Énergie</span><span>Agroalimentaire</span><span>Formation</span><span>IT</span><span>Médical</span><span>Mécénat</span></div></div>
+          <div><h3>Formation</h3><p>Technico-commerciale de santé (2002)<br>Formation continue en marketing digital (FR/US)</p></div>
+          <div><h3>Langues</h3><p>Français, anglais courant</p></div>
+          <div><h3>Ce qui me caractérise</h3><div class="tags"><span>Énergie communicative</span><span>Directe et claire</span><span>Redonne confiance</span><span>Créative</span><span>Tenace dans le suivi et les relances</span><span>Méthodique</span><span>Excellence relationnelle</span><span>Intègre et transparente</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:24px;padding-bottom:40px">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2>Parlons de votre équipe.</h2>
+          <p>Un premier échange pour comprendre où en sont vos commerciaux et ce qui les ferait avancer.</p>
+        </div>
+        <ul>
+          <li><small>E-mail</small><a href="mailto:vanessa@vpouppeville.com">vanessa@vpouppeville.com</a></li>
+          <li><small>Téléphone</small><a href="tel:+33622296566">06 22 29 65 66</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">Vanessa Pouppeville · Coach en développement commercial</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('[data-count]');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      var el = e.target, to = +el.dataset.count, from = +(el.dataset.from || 0), suf = el.dataset.suffix || '';
+      var t0 = null, dur = 1200;
+      function step(t){
+        if (!t0) t0 = t;
+        var p = Math.min(1, (t - t0) / dur), k = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(from + (to - from) * k) + suf;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }, {threshold: .6});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
