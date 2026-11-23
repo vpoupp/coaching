@@ -62,7 +62,7 @@ p{margin:0;text-wrap:pretty}
 .hero h1 em::after{display:none;content:"";position:absolute;left:0;right:0;bottom:.06em;height:.12em;background:var(--accent);opacity:.18;border-radius:4px;transform-origin:left;animation:underline .9s .35s cubic-bezier(.2,.8,.2,1) both}
 @keyframes underline{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .lead{font-size:19px;color:var(--muted);max-width:34em}
-.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .15s ease, background .15s ease}
 .btn:hover{transform:translateY(-1px)}
 .btn-primary{background:var(--accent);color:#fff}
@@ -87,7 +87,7 @@ p{margin:0;text-wrap:pretty}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line)}
 .stat{padding:28px 20px 30px 0;display:flex;flex-direction:column;gap:6px}
 .stat + .stat{padding-left:24px;border-left:1px solid var(--line)}
-.stat b{font-family:var(--display);font-size:clamp(34px,4vw,52px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-0.03em}
+.stat b{white-space:nowrap;font-family:var(--display);font-size:clamp(30px,3.1vw,42px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-0.03em}
 .stat span{font-size:15px;color:var(--muted);line-height:1.4}
 @media (max-width:760px){.stats{grid-template-columns:1fr}.stat + .stat{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
 
@@ -104,7 +104,7 @@ section{padding:96px 0}
 .card .ico{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
 .card h3{font-size:23px;font-weight:700}
 .card p{color:var(--muted)}
-@media (max-width:760px){.bring{grid-template-columns:1fr}}
+@media (max-width:560px){.bring{grid-template-columns:1fr}}
 
 /* Video band */
 .video-band{background:var(--night);color:var(--night-ink)}
@@ -197,7 +197,6 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
       <div>
         <span class="eyebrow">Coaching en développement commercial</span>
         <h1>Vendre, manager, coacher : <em>25 ans de terrain commercial.</em></h1>
-        <p class="lead">Commerciale depuis 2002, je recrute et manage des commerciaux indépendants depuis 2008, et j'accompagne des entrepreneurs et des TPE/PME dans leur développement commercial. En 2024, j'étais n°1 parmi les partenaires indépendants de mon réseau.</p>
         <div class="ctas">
           <a class="btn btn-primary" href="#video">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
@@ -212,9 +211,9 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
     </div>
 
     <div class="stats" aria-label="Chiffres clés">
-      <div class="stat"><b data-count="25" data-suffix=" ans">25 ans</b><span>de développement commercial, en B2B et en B2C</span></div>
-      <div class="stat"><b>N°1</b><span>en 2024 parmi les partenaires indépendants solo de mon réseau (n°2 en 2023)</span></div>
-      <div class="stat"><b data-count="110" data-suffix=" k€+">110 k€+</b><span>de commissions facturées par an en 2023 et en 2024</span></div>
+      <div class="stat"><b>18 ans</b><span>d'accompagnement d'équipes commerciales, du recrutement à la performance</span></div>
+      <div class="stat"><b>100</b><span>partenaires commerciaux recrutés en 3 mois pour une entreprise du solaire</span></div>
+      <div class="stat"><b>N°1</b><span>des business developers freelance chez Girasole Energies en 2024 (n°2 en 2023)</span></div>
     </div>
   </div>
 
@@ -246,14 +245,14 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
       </div>
       <div class="path">
         <ol class="timeline">
-          <li><span class="when">Depuis 2008</span><h3>Coaching en développement commercial</h3><p>J'accompagne des TPE/PME et des entrepreneurs : techniques et stratégies de vente, structuration et pilotage d'équipes commerciales. Je recrute et manage des commerciaux indépendants, sur le long terme ou pour la mise en place de nouvelles équipes.</p></li>
-          <li><span class="when">Depuis 2008</span><h3>Commerciale freelance</h3><p>Photovoltaïque B2B (projets jusqu'à 1 M€, cycle de vente complet), courtage gaz et électricité, rénovation de l'habitat, secteur médical.</p></li>
+          <li><span class="when">Depuis 2008</span><h3>Coaching et conseil en développement commercial</h3><p>J'accompagne des startups, des TPE/PME et des entrepreneurs, en coaching ou en conseil : stratégie et techniques de vente, structuration et pilotage d'équipes commerciales.</p></li>
+          <li><span class="when">Depuis 2008</span><h3>Business developer freelance</h3><p>Photovoltaïque B2B (projets jusqu'à 1 M€, cycle de vente complet), courtage gaz et électricité, rénovation de l'habitat, secteur médical.</p></li>
           <li><span class="when">2002 – 2008</span><h3>Débuts</h3><p>Gérante d'une société de communication événementielle (2006 – 2008), commerciale et visiteuse médicale en santé et parapharmacie (2002 – 2006).</p></li>
         </ol>
         <div class="side">
           <div><h3>Formation</h3><p>Technico-commerciale de santé (2002)<br>Formation continue en marketing digital (FR/US)</p></div>
           <div><h3>Langues</h3><p>Français, anglais courant</p></div>
-          <div><h3>Ce que les personnes coachées disent de moi</h3><ul class="traits">
+          <div><h3>Mes points forts</h3><ul class="traits">
             <li><b>Énergie communicative</b><span>« Vanessa a une énergie essentielle à ce qu'elle fait. » Marine</span></li>
             <li><b>Directe et claire</b><span>« On ne tourne pas autour du pot. » Aurélie</span></li>
             <li><b>Redonne confiance</b><span>« Elle m'a très vite donné confiance. » Marine</span></li>
@@ -268,9 +267,7 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
   <section id="apport" style="padding-top:24px">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Compétences</span>
-        <h2>Ce que je sais faire</h2>
-        <p>Ce que je transmets vient de ma propre expérience : vendre, recruter, animer et faire progresser des équipes.</p>
+        <h2>Compétences</h2>
       </div>
       <div class="bring">
         <article class="card">
@@ -279,14 +276,14 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
           <p>Je travaille sur les freins et les croyances qui empêchent de vendre, pour redonner confiance et envie d'aller chercher de nouveaux clients.</p>
         </article>
         <article class="card">
+          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
+          <h3>Développer la performance</h3>
+          <p>Techniques et stratégies de vente, négociation, closing, pilotage de l'activité des équipes commerciales.</p>
+        </article>
+        <article class="card">
           <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
           <h3>Structurer la prospection</h3>
           <p>Prospection multicanal, relances rigoureuses, suivi des cycles de vente longs.</p>
-        </article>
-        <article class="card">
-          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.4 0 4 1.5 4.6 4"/></svg></div>
-          <h3>Animer et piloter</h3>
-          <p>Depuis 2008, je recrute et manage des commerciaux indépendants : parfois sur le long terme, parfois pour mettre en place une nouvelle équipe.</p>
         </article>
         <article class="card">
           <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></div>
@@ -303,7 +300,6 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
       <div class="sec-head">
         <span class="eyebrow">Témoignages</span>
         <h2>Ce que disent les personnes que j'ai accompagnées</h2>
-        <p>Témoignages traduits de l'anglais. Pour chacun : un extrait, la traduction complète et l'original.</p>
       </div>
       <div class="tgrid">
         <article class="tcard">
